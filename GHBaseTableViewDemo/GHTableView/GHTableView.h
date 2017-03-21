@@ -94,7 +94,7 @@
 /*
  点击Cell时的回调
  */
-@property(nonatomic,copy) void(^selectHanlder)(id model,NSIndexPath* idp);
+@property(nonatomic,copy) void(^selectHandler)(id model,NSIndexPath* idp);
 
 /*
  刷新Cell时回调，如果仅仅根据model刷新cell可以不必设定

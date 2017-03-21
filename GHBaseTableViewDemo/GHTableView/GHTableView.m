@@ -242,8 +242,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.selectHanlder) {
-        self.selectHanlder([self modelWithIndexPath:indexPath],indexPath);
+    if (self.selectHandler) {
+        self.selectHandler([self modelWithIndexPath:indexPath],indexPath);
     }
     if (self.autoDeselect) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];

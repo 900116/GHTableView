@@ -30,7 +30,7 @@
     [ghtableView setRefreshCell:^(UITableViewCell *cell, id model, NSIndexPath * idp) {
         cell.textLabel.text = model;
     }];
-    [ghtableView setSelectHanlder:^(id model, NSIndexPath * idp) {
+    [ghtableView setSelectHandler:^(id model, NSIndexPath * idp) {
         NSLog(@"点击%ld",idp.row);
     }];
     [self.view addSubview:ghtableView];

@@ -31,7 +31,7 @@
         NSLog(@"点击%ld",idp.row);
     }];
     [self.view addSubview:ghtableView];
-    //进制自动取消选中
+    //禁止自动取消选中
     //[ghtableView setAutoDeselect:NO];
     [ghtableView gh_setDatas:@[@"A",@"B",@"C",@"D",@"E"]];
 }

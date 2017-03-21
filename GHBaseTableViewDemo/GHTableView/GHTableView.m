@@ -193,16 +193,11 @@
     }
 }
 
--(BOOL)respondsToSelector:(SEL)aSelector
-{
-    if (aSelector == @selector(sectionIndexTitlesForTableView:)) {
-        return self.showSectionRightBar;
-    }
-    return [super respondsToSelector:aSelector];
-}
-
 - (NSArray*)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
+    if (!self.showSectionRightBar) {
+        return nil;
+    }
     return self.sectionRightBarTitles?self.sectionRightBarTitles:(self.sectionHeaderTitles?self.sectionHeaderTitles:self.sectionFooterTitles);
 }
 

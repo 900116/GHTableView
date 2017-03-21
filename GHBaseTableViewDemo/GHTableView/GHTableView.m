@@ -70,7 +70,7 @@
 
 -(void)setup{
     self.cell_dict = [NSMutableDictionary new];
-    [self.cell_dict setObject:[UITableViewCell class] forKey:[UITableViewCell cellIdentifier]];
+    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:[UITableViewCell cellIdentifier]];
     self.datas = [NSMutableArray new];
     self.cellHeights = [NSMutableArray new];
     self.autoDeselect = YES;

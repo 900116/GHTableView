@@ -7,7 +7,7 @@
 //
 
 #import "Demo2ViewController.h"
-#import "GHTableView.h"
+#import <GHBlockTableView/GHBlockTableView.h>
 
 @interface Demo2ViewController ()
 
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GHTableView* ghtableView = [[GHTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    GHBlockTableView* ghtableView = [[GHBlockTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [ghtableView setShowSection:YES];
     [ghtableView setShowSectionRightBar:YES];
     [ghtableView setShowSectionHeaderTitle:YES];
@@ -33,7 +33,6 @@
     [ghtableView setSelectHandler:^(id model, NSIndexPath * idp) {
         NSLog(@"点击%ld",idp.row);
     }];
-    ghtableView.sectionRightBarTitles = @[@"I",@"II"]; //如果setShowSectionRightBar为YES，不写这一行，其值等于headertitles
     [self.view addSubview:ghtableView];
 
     [ghtableView gh_setDatas:@[@[@"A",@"B",@"C"],@[@"D",@"E"]]];
@@ -52,6 +51,8 @@
 //    [ghtableView setSectionHeaderHeightHandler:^CGFloat(NSInteger section) {
 //        return 30.f;//如果showSectionHeaderTitle为YES，该值默认为28
 //    }];
+    
+    ghtableView.sectionRightBarTitles = @[@"I",@"II"]; //如果setShowSectionRightBar为YES，不写这一行，其值等于headertitles
 }
 
 - (void)didReceiveMemoryWarning {

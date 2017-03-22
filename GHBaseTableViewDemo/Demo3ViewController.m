@@ -7,7 +7,7 @@
 //
 
 #import "Demo3ViewController.h"
-#import "GHTableView.h"
+#import <GHBlockTableView/GHBlockTableView.h>
 @interface Demo3Cell1:UITableViewCell
 @end
 @implementation Demo3Cell1
@@ -54,7 +54,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GHTableView* ghtableView = [[GHTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    GHBlockTableView* ghtableView = [[GHBlockTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [ghtableView addCellCls:[Demo3Cell1 class] nib:NO];
     [ghtableView addCellCls:[Demo3Cell2 class] nib:NO];
     //用下面方法可以将高度缓存（动态高度提升性能），默认是不缓存的

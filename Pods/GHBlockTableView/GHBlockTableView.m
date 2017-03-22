@@ -6,15 +6,15 @@
 //  Copyright © 2016年 yongche. All rights reserved.
 //
 
-#import "GHTableView.h"
+#import "GHBlockTableView.h"
 #import "UITableViewCell+GHTableView.h"
 
-@interface GHTableView()
+@interface GHBlockTableView()
 @property(nonatomic,strong) NSMutableArray* cellHeights;
 @property(nonatomic,strong) NSMutableDictionary* cell_dict;
 @end
 
-@implementation GHTableView
+@implementation GHBlockTableView
 -(instancetype)init
 {
     self = [super init];

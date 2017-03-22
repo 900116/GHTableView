@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+GHTableView.h"
 
-@interface GHTableView : UITableView<UITableViewDelegate,UITableViewDataSource>
+@interface GHBlockTableView : UITableView<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) NSMutableArray* datas;
 /*
  是否为group类型的（分组table）

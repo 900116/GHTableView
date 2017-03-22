@@ -7,7 +7,7 @@
 //
 
 #import "Demo1ViewController.h"
-#import "GHTableView.h"
+#import <GHBlockTableView/GHBlockTableView.h>
 
 @interface Demo1ViewController ()
 
@@ -18,12 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GHTableView* ghtableView = [[GHTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//   如果仅仅为UITableViewCell 则可以不注册
-//    [ghtableView addCellCls:[UITableViewCell class] nib:NO];
-//    [ghtableView setCellClass_configureWithIndexPath:^Class(NSIndexPath * idp) {
-//        return [UITableViewCell class];
-//    }];
+    GHBlockTableView* ghtableView = [[GHBlockTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [ghtableView addCellCls:[UITableViewCell class] nib:NO];
+    [ghtableView setCellClass_configureWithIndexPath:^Class(NSIndexPath * idp) {
+        return [UITableViewCell class];
+    }];
     [ghtableView setRefreshCell:^(UITableViewCell *cell, id model, NSIndexPath * idp) {
         cell.textLabel.text = model;
     }];
@@ -31,7 +30,7 @@
         NSLog(@"点击%ld",idp.row);
     }];
     [self.view addSubview:ghtableView];
-    //禁止自动取消选中
+    //进制自动取消选中
     //[ghtableView setAutoDeselect:NO];
     [ghtableView gh_setDatas:@[@"A",@"B",@"C",@"D",@"E"]];
 }

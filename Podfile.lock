@@ -1,12 +1,12 @@
 PODS:
-  - GHBlockTableView (0.1)
+  - GHBlockTableView (1.0.1)
 
 DEPENDENCIES:
-  - GHBlockTableView (~> 0.1)
+  - GHBlockTableView (~> 1.0.1)
 
 SPEC CHECKSUMS:
-  GHBlockTableView: 01f38eec4d421e21a6da2f306e34332714cf3305
+  GHBlockTableView: a58ba105ffa4caeb9d8834c387f701e5f7223b40
 
-PODFILE CHECKSUM: ecc3f4905f3c89748d1b6691da98ca387adfd4f9
+PODFILE CHECKSUM: e68e69bee2f8578f098ec1344af3f83f50da41d8
 
 COCOAPODS: 1.1.1

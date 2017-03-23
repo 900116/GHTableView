@@ -165,8 +165,8 @@
     if (!self.showSectionFooterTitle) {
         return 0.0;
     }
-    if (self.sectionHeaderHeightHandler) {
-        return self.sectionHeaderHeightHandler(section);
+    if (self.sectionFooterHeightHandler) {
+        return self.sectionFooterHeightHandler(section);
     }
     return 28.f;
 }
